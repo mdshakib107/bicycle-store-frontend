@@ -38,7 +38,7 @@ const UserManagement = () => {
       toast.success("User deleted");
     } catch (err: any) {
       toast.error("Failed to delete user");
-      console.log(err);
+      // console.log(err);
     }
   };
 

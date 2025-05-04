@@ -1,13 +1,13 @@
 import CustomButton from "@/components/shared/CustomButton";
+import Loading from "@/components/shared/Loading";
+import { verifyToken } from "@/utils/verifyToken";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Form, Input } from "antd";
+import { useEffect, useState } from "react";
 import { TbFidgetSpinner } from "react-icons/tb";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { useRegisterMutation } from "../../redux/api/authApi"; // Import register mutation
-import { useEffect, useState } from "react";
-import Loading from "@/components/shared/Loading";
-import { verifyToken } from "@/utils/verifyToken";
 
 const Register = () => {
   // useRegister mutation hook
@@ -33,7 +33,7 @@ const Register = () => {
       email: values?.email,
       password: values?.password,
     };
-    console.log(userInfo);
+    // console.log(userInfo);
     if (values.password !== values.confirmPassword) {
       toast.error("Passwords do not match", { id: toastId });
       return;
@@ -54,7 +54,7 @@ const Register = () => {
       }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      console.log(error.data.stack);
+      // console.log(error.data.stack);
       toast.error(`${error?.data?.message || "Something went wrong!"}`, {
         id: toastId,
       });
