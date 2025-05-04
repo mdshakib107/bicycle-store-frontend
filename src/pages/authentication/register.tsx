@@ -95,7 +95,7 @@ const Register = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="p-8 border rounded shadow-md border-purple-600 shadow-purple-600">
+      <div className="p-8 border rounded shadow-md border-purple-600 shadow-purple-600 relative">
         <Form
           name="register"
           initialValues={{ remember: true }}
@@ -181,6 +181,28 @@ const Register = () => {
             </p>
           </Form.Item>
         </Form>
+        
+        {/* back to terms page */}
+        <Link
+          to={"/"}
+          className="absolute left-24 bottom-2 flex justify-center items-center gap-1 p-3 rounded-4xl text-purple-600  hover:text-blue-600"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+          <p className="text-base">Home</p>
+        </Link>
       </div>
     </div>
   );

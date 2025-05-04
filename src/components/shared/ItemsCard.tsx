@@ -118,7 +118,7 @@ const ItemsCard: React.FC<ItemsCardProps> = ({ data, isPending }) => {
                   </p>
                   <p className="flex justify-between">
                     <span className="font-medium">Price:</span>
-                    <span className="font-serif">${price}</span>
+                    <span className="font-serif">{price} ৳</span>
                   </p>
                   <p className="flex justify-between">
                     <span className="font-medium">Quantity:</span>

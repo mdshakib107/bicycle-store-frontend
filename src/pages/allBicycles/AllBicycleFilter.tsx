@@ -5,9 +5,13 @@ import { useSelector } from "react-redux";
 
 const { Option } = Select;
 
-const AllBicycleFilter = ({ handleChange }: AllBicycleFilterProps) => {
+const AllBicycleFilter = ({
+  handleChange,
+  brandOptions,
+  typeOptions,
+}: AllBicycleFilterProps) => {
   const filters = useSelector((state: RootState) => state.filter);
-  // console.log(filters);
+  // console.log(brandOptions, typeOptions);
 
   return (
     <div className="p-6 bg-white shadow-md rounded-lg w-full">
@@ -30,7 +34,7 @@ const AllBicycleFilter = ({ handleChange }: AllBicycleFilterProps) => {
         <Slider
           range
           min={0}
-          max={10000}
+          max={500000}
           step={100}
           value={filters.priceRange}
           onChange={(value) => handleChange("priceRange", value)}
@@ -51,9 +55,11 @@ const AllBicycleFilter = ({ handleChange }: AllBicycleFilterProps) => {
           allowClear
         >
           <Option value="">All</Option>
-          <Option value="road">Road</Option>
-          <Option value="mountain">Mountain</Option>
-          <Option value="hybrid">Hybrid</Option>
+          {typeOptions?.map((type) => (
+            <Option key={type} value={type}>
+              {type.charAt(0).toUpperCase() + type.slice(1)}
+            </Option>
+          ))}
         </Select>
       </div>
 
@@ -68,10 +74,11 @@ const AllBicycleFilter = ({ handleChange }: AllBicycleFilterProps) => {
           allowClear
         >
           <Option value="">All</Option>
-          <Option value="valoc">Valoc</Option>
-          <Option value="duronto">Duronto</Option>
-          <Option value="speedX">SpeedX</Option>
-          <Option value="BMW">BMW</Option>
+          {brandOptions?.map((brand) => (
+            <Option key={brand} value={brand}>
+              {brand}
+            </Option>
+          ))}
         </Select>
       </div>
 

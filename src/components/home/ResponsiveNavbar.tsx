@@ -43,7 +43,9 @@ const ResponsiveNavbar = () => {
 
     try {
       localStorage.removeItem("authToken");
+      localStorage.removeItem("userData");
       sessionStorage.removeItem("authToken");
+      sessionStorage.removeItem("userData");
       dispatch(logout());
       toast.success("Logged out successfully", { id: toastId, duration: 2000 });
     } catch (error) {
@@ -141,21 +143,27 @@ const ResponsiveNavbar = () => {
   // mobile sidebar
   const mobileSidebarLinks = (
     <ul className="items-start gap-[20px] text-[1rem] flex flex-col">
-      <li className="hover:text-[#3B9DF8] transition-all duration-300 capitalize cursor-pointer">
+      <li className="capitalize cursor-pointer">
         <NavLink to="/" className={activeLink}>
-          Home
+          <span className="hover:text-[#3B9DF8] transition-all duration-300  text-white">
+            Home
+          </span>
         </NavLink>
       </li>
 
-      <li className="hover:text-[#3B9DF8] transition-all duration-300 capitalize cursor-pointer">
+      <li className="capitalize cursor-pointer">
         <NavLink to="/AllBicycles" className={activeLink}>
-          All Bicycle
+          <span className="hover:text-[#3B9DF8] transition-all duration-300  text-white">
+            All Bicycle
+          </span>
         </NavLink>
       </li>
 
-      <li className="hover:text-[#3B9DF8] transition-all duration-300 capitalize cursor-pointer">
+      <li className="capitalize cursor-pointer">
         <NavLink to="/about" className={activeLink}>
-          About Us
+          <span className="hover:text-[#3B9DF8] transition-all duration-300  text-white">
+            About Us
+          </span>
         </NavLink>
       </li>
 
@@ -291,7 +299,7 @@ const ResponsiveNavbar = () => {
           mobileSidebarOpen
             ? "translate-x-0 opacity-100 z-20"
             : "translate-x-[200px] opacity-0 z-[-1] hidden"
-        } md:hidden bg-gradient-to-bl from-blue-500 via-accent-foreground to-purple-500 text-white! boxShadow p-4 text-center absolute top-[65px] right-0 sm:w-[300px] w-full rounded-md transition-all duration-300 shadow-purple-600 shadow-lg`}
+        } md:hidden bg-gradient-to-bl from-blue-500  to-purple-500 text-white! boxShadow p-4 text-center absolute top-[65px] right-0 sm:w-[300px] w-full rounded-md transition-all duration-300 shadow-purple-600 shadow-lg`}
       >
         {mobileSidebarLinks}
       </aside>

@@ -125,4 +125,6 @@ type FilterKey = "search" | "priceRange" | "type" | "brand" | "availability";
 
 export interface AllBicycleFilterProps {
   handleChange: (key: FilterKey, value: string | number[] | boolean) => void;
+  brandOptions: string[];
+  typeOptions: string[];
 }

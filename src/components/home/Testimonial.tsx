@@ -24,6 +24,13 @@ const Testimonial = () => {
       name: "Mr. Sakib",
       title: "Cyclist & Blogger",
     },
+    {
+      image: "https://img.freepik.com/foto-gratuito/silhouette-di-donne-con-bicicletta-e-bel-cielo_1150-5338.jpg",
+      quote:
+        "I recommended this site for casuals, looking for affordable and quality product. I am very proud to buy their product!",
+      name: "Ms. Afrina",
+      title: "Cyclist",
+    },
     // Add more testimonials here
   ];
 

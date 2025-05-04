@@ -41,7 +41,7 @@ const BicyclesDetailPage = () => {
                 <Text strong>Type:</Text> {productData?.type}
               </Col>
               <Col span={12}>
-                <Text strong>Price:</Text> ${productData?.price}
+                <Text strong>Price:</Text> {productData?.price} Taka
               </Col>
             </Row>
             <Row gutter={16} className="mt-2">

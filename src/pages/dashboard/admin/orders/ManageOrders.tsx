@@ -67,7 +67,7 @@ const ManageOrders = () => {
 
     try {
       const result = await deleteOrder(orderId);
-      console.log("result",result)
+      // console.log("result",result)
       if (result?.data?.success) {
         toast.success(result?.data?.message);
         refetch();
@@ -86,7 +86,7 @@ const ManageOrders = () => {
           orderId: orderId,
           updateData: { status },
         });
-        console.log(result)
+        // console.log(result)
         if (result?.data?.success) {
           toast.success(result?.data?.message);
           setOpenStatusDialog(false);

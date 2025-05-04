@@ -35,7 +35,7 @@ const ViewOrders = () => {
     }
   }, [data]);
 
-  console.log(orders);
+  // console.log(orders);
 
 
 

@@ -4,7 +4,20 @@
 
 ### **Project Overview & Objective**
 
-A Bicycle Store application featuring user-friendly functionalities, secure authentication, and efficient product management. Ensure the application is responsive, free of errors, and visually appealing.
+A Bicycle Store application featuring user-friendly functionalities, secure authentication, and efficient product management. Ensuring the application is responsive, free of errors, and visually appealing.
+
+## 🌐 Live URL: 
+[Bicycle Store](https://bicyclestore.netlify.app/)
+
+## 📌 Credentials:
+
+**Admin:**
+ - email: mina@mail.com
+ - pass: 1234
+   
+**User:**
+ - email: nina@mail.com
+ - pass: 1234
 
 ## **Main Functionalities:**
 
