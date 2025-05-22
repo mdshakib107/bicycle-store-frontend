@@ -8,6 +8,7 @@ A Bicycle Store application featuring user-friendly functionalities, secure auth
 
 ## 🌐 Live URL: 
 [Bicycle Store](https://bicycle-black.vercel.app/)
+Server Link: https://bicycle-backend-psi.vercel.app/
 
 ## 📌 Credentials:
 
