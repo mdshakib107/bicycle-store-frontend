@@ -7,7 +7,7 @@
 A Bicycle Store application featuring user-friendly functionalities, secure authentication, and efficient product management. Ensuring the application is responsive, free of errors, and visually appealing.
 
 ## 🌐 Live URL: 
-[Bicycle Store](https://bicyclestore.netlify.app/)
+[Bicycle Store](https://bicycle-black.vercel.app/)
 
 ## 📌 Credentials:
 
